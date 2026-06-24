@@ -81,11 +81,60 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   .op h3{font-family:var(--serif);font-size:17px;font-weight:500;line-height:1.2;margin-bottom:6px}
   .op p{font-size:12px;color:var(--ink-soft)}
   @media(max-width:760px){.cw-grid,.grid3{grid-template-columns:1fr}.page-head h1{font-size:34px}}
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
+  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
+  @media(max-width:480px){.wrap{padding:0 18px}h1.lead{font-size:34px}.cs h1{font-size:28px}.ab h1{font-size:32px}.p-body{padding:26px 22px}.cw-grid,.grid3{grid-template-columns:1fr}.foot-grid .fbig{font-size:24px}.tags{gap:6px}.cs,.ab{padding:40px 18px 20px}}
+
+
+
+  /* ===== mobile nav (hamburger) ===== */
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){
+    .navtoggle{display:block}
+    .navlinks{position:fixed;top:0;right:0;height:100vh;width:min(74vw,300px);background:var(--perola);flex-direction:column;justify-content:flex-start;gap:0;padding:90px 32px 32px;box-shadow:-12px 0 40px rgba(42,38,32,.16);transform:translateX(100%);transition:transform .3s ease;z-index:70}
+    .navlinks.open{transform:translateX(0)}
+    .navlinks a{font-size:14px;letter-spacing:.06em;padding:16px 0;border-bottom:.5px solid var(--line);width:100%}
+    nav .wrap{position:relative}
+    body.nav-open{overflow:hidden}
+    .navscrim{display:none;position:fixed;inset:0;background:rgba(42,38,32,.35);z-index:40}
+    .navscrim.open{display:block}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 22px}
+    .hero{padding:70px 0 50px}
+    .sec-head{flex-wrap:wrap;gap:6px}
+    .cs,.ab{padding:48px 22px 20px}
+    .csfoot{flex-wrap:wrap}
+    .csfoot .btn{flex:1;text-align:center;min-width:140px}
+    .foot-grid{flex-direction:column;align-items:flex-start}
+    .panel{width:100vw;padding:70px 26px 40px}
+    .tl-row{grid-template-columns:54px 1fr;gap:12px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    h1.lead{font-size:34px}
+    .cs h1{font-size:28px}
+    .ab h1{font-size:32px}
+    .p-body{padding:26px 22px}
+    .cw-grid,.grid3{grid-template-columns:1fr}
+    .foot-grid .fbig{font-size:24px}
+    .tags{gap:6px}.cs,.ab{padding:40px 18px 20px}
+  }
 </style>
 </head>
 <body>
 <nav><div class="wrap">
   <a class="brand" href="index.html">Ucheoma Okoma</a>
+  <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
   <div class="navlinks">
     <a href="index.html">Home</a>
     <a href="work.html" class="active">Work</a>
@@ -94,6 +143,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
     <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
   </div>
 </div></nav>
+<div class="navscrim"></div>
 
 <div class="wrap">
   <section class="page-head">
@@ -180,5 +230,18 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
     <div class="social"><a href="mailto:okomaucheoma404@gmail.com">Email</a><a href="https://www.linkedin.com/in/ucheoma-okoma/" target="_blank">LinkedIn</a><a href="https://medium.com/@ucheomaokoma_" target="_blank">Medium</a></div>
   </div><div class="copy">© 2026 Ucheoma Okoma</div></footer>
 </div>
+<script>
+(function(){
+  var t=document.querySelector('.navtoggle'),
+      l=document.querySelector('.navlinks'),
+      s=document.querySelector('.navscrim');
+  if(!t||!l){return;}
+  function openMenu(){l.classList.add('open');t.classList.add('open');if(s){s.classList.add('open');}document.body.classList.add('nav-open');}
+  function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
+  t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
+  if(s){s.addEventListener('click',closeMenu);}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
+})();
+</script>
 </body>
 </html>
