@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ucheoma Okoma</title>
+<link rel="icon" href="Ucheoma.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --perola:#F0EDE4; --perola-deep:#E7E2D6; --bege:#E3D6C5;
+  --azul:#788990; --azul-deep:#5e6e75; --terra:#974315; --terra-deep:#7d370f;
+  --verde:#8D957E; --verde-deep:#6f7763;
+  --ink:#2a2620; --ink-soft:#5d564c; --ink-faint:#938a7c;
+  --line:rgba(42,38,32,.12); --line-2:rgba(42,38,32,.20);
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,sans-serif; --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--perola);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--terra);color:var(--perola)}
+.accent-link{color:var(--terra);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.accent-link:hover{gap:9px}
+nav{position:sticky;top:0;z-index:50;background:rgba(240,237,228,.85);backdrop-filter:blur(12px);border-bottom:.5px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.brand{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks{display:flex;gap:30px}
+.navlinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;transition:color .2s}
+.navlinks a:hover,.navlinks a.active{color:var(--terra)}
+.btn{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:13px 22px;border-radius:2px;border:1px solid var(--line-2);background:transparent;cursor:pointer;transition:all .2s;color:var(--ink);display:inline-block}
+.btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn.primary{background:var(--terra);color:var(--perola);border-color:var(--terra)}
+.btn.primary:hover{background:var(--terra-deep)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:42px;padding-bottom:18px;border-bottom:1px solid var(--ink)}
+.sec-head h2{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em}
+.sec-head .num{font-size:11px;letter-spacing:.16em;color:var(--ink-faint);font-weight:600}
+footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.foot-grid .fbig{font-family:var(--serif);font-size:32px;font-weight:500;letter-spacing:-.01em;max-width:430px;line-height:1.25}
+.foot-grid .fbig a{color:var(--terra)}
+.social{display:flex;gap:20px;flex-wrap:wrap}
+.social a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;transition:color .2s}
+.social a:hover{color:var(--terra)}
+.copy{font-size:12px;color:var(--ink-faint);margin-top:30px}
+.placeholder{border:1.5px dashed var(--line-2);border-radius:6px;background:var(--perola-deep);padding:28px 20px;text-align:center;margin:16px 0;color:var(--ink-faint)}
+.placeholder .pl-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--terra);margin-bottom:6px}
+.placeholder .pl-desc{font-size:13px;color:var(--ink-soft)}
+@media(max-width:560px){.wrap{padding:0 24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+</style>
+<style>
+  .ab{padding:70px 40px 30px;max-width:760px;margin:0 auto}
+  .ab h1{font-family:var(--serif);font-size:46px;letter-spacing:-.02em;font-weight:500;margin-bottom:24px}
+  .ab .lede{font-size:19px;color:var(--ink-soft);margin-bottom:14px;line-height:1.6}
+  .ab-block{margin:52px 0}
+  .ab-block h2{font-family:var(--serif);font-size:24px;font-weight:500;margin-bottom:8px;letter-spacing:-.01em}
+  .ab-block .bnote{font-size:14px;color:var(--ink-faint);margin-bottom:22px;font-style:italic;font-family:var(--serif)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13px;background:var(--perola-deep);color:var(--ink-soft);padding:7px 14px;border-radius:20px}
+  .skillgroup{margin-bottom:20px}
+  .skillgroup .sg-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--azul-deep);font-weight:600;margin-bottom:10px}
+  .edu-row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:.5px solid var(--line)}
+  .edu-row:last-child{border-bottom:none}
+  .edu-row .et{font-family:var(--serif);font-size:17px;font-weight:500}
+  .edu-row .er{color:var(--ink-faint);font-size:12px;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase;font-weight:500;align-self:center}
+  .fun p{font-size:17px;color:var(--ink-soft);line-height:1.75}
+  @media(max-width:560px){.ab h1{font-size:34px}}
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){.navtoggle{display:block}.navlinks{position:fixed;top:0;right:0;height:100vh;width:min(74vw,300px);background:var(--perola);flex-direction:column;justify-content:flex-start;gap:0;padding:90px 32px 32px;box-shadow:-12px 0 40px rgba(42,38,32,.16);transform:translateX(100%);transition:transform .3s ease;z-index:70}.navlinks.open{transform:translateX(0)}.navlinks a{font-size:14px;letter-spacing:.06em;padding:16px 0;border-bottom:.5px solid var(--line);width:100%}nav .wrap{position:relative}body.nav-open{overflow:hidden}.navscrim{display:none;position:fixed;inset:0;background:rgba(42,38,32,.35);z-index:40}.navscrim.open{display:block}}
+  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
+  @media(max-width:480px){.wrap{padding:0 18px}h1.lead{font-size:34px}.cs h1{font-size:28px}.ab h1{font-size:32px}.p-body{padding:26px 22px}.cw-grid,.grid3{grid-template-columns:1fr}.foot-grid .fbig{font-size:24px}.tags{gap:6px}.cs,.ab{padding:40px 18px 20px}}
+
+
+  /* ===== mobile nav (hamburger) ===== */
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){
+    .navtoggle{display:block}
+    .navlinks{position:fixed;top:0;right:0;height:100vh;width:min(74vw,300px);background:var(--perola);flex-direction:column;justify-content:flex-start;gap:0;padding:90px 32px 32px;box-shadow:-12px 0 40px rgba(42,38,32,.16);transform:translateX(100%);transition:transform .3s ease;z-index:70}
+    .navlinks.open{transform:translateX(0)}
+    .navlinks a{font-size:14px;letter-spacing:.06em;padding:16px 0;border-bottom:.5px solid var(--line);width:100%}
+    nav .wrap{position:relative}
+    body.nav-open{overflow:hidden}
+    .navscrim{display:none;position:fixed;inset:0;background:rgba(42,38,32,.35);z-index:40}
+    .navscrim.open{display:block}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 22px}
+    .hero{padding:70px 0 50px}
+    .sec-head{flex-wrap:wrap;gap:6px}
+    .cs,.ab{padding:48px 22px 20px}
+    .csfoot{flex-wrap:wrap}
+    .csfoot .btn{flex:1;text-align:center;min-width:140px}
+    .foot-grid{flex-direction:column;align-items:flex-start}
+    .panel{width:100vw;padding:70px 26px 40px}
+    .tl-row{grid-template-columns:54px 1fr;gap:12px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    h1.lead{font-size:34px}
+    .cs h1{font-size:28px}
+    .ab h1{font-size:32px}
+    .p-body{padding:26px 22px}
+    .cw-grid,.grid3{grid-template-columns:1fr}
+    .foot-grid .fbig{font-size:24px}
+    .tags{gap:6px}.cs,.ab{padding:40px 18px 20px}
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="index.html">Ucheoma Okoma</a>
+  <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html" class="active">About</a>
+    <a href="index.html#writing">Writing</a>
+    <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
+  </div>
+</div></nav>
+<div class="navscrim"></div>
+
+<div class="wrap ab">
+  <a class="back accent-link" href="index.html" style="display:inline-flex;margin-bottom:30px">← Back to Home</a>
+  <h1>About</h1>
+  <p class="lede">I started out in medicine, and over the last few years I moved into security. After my medical degree I spent two years building a computer science foundation, completed a postgraduate certificate in cybersecurity, and I'm now doing a master's that combines cybersecurity with health informatics. The work I care about most sits where those two worlds meet.</p>
+  <!-- <a class="accent-link" href="https://medium.com/@ucheomaokoma_/when-the-white-coat-no-longer-fit-why-i-stepped-away-from-medicine-after-6-years-cb2220a98107" target="_blank">Read why I left medicine →</a> -->
+
+  <div class="ab-block"><h2>Skills</h2><div class="bnote">Security first, and the rest in support of it.</div>
+    <div class="skillgroup"><div class="sg-label">Security &amp; assessment</div><div class="chips"><span class="chip">OWASP top 10</span><span class="chip">OWASP API top 10</span><span class="chip">NIST CSF</span><span class="chip">NIST AI RMF</span><span class="chip">STRIDE threat modeling</span><span class="chip">Risk assessment</span><span class="chip">HIPAA, PCI, SOC 2</span><span class="chip">MITRE ATT&amp;CK</span></div></div>
+    <div class="skillgroup"><div class="sg-label">Tools</div><div class="chips"><span class="chip">Burp Suite</span><span class="chip">OWASP ZAP</span><span class="chip">Postman</span><span class="chip">Nmap</span><span class="chip">Wireshark</span><span class="chip">Metasploit</span><span class="chip">Suricata</span><span class="chip">ELK, Kibana</span><span class="chip">AWS</span><span class="chip">Docker</span></div></div>
+    <div class="skillgroup"><div class="sg-label">Programming</div><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">Java</span><span class="chip">R</span><span class="chip">Bash</span></div></div>
+  </div>
+
+  <div class="ab-block"><h2>Certifications</h2><div class="chips" style="margin-top:14px"><span class="chip">CompTIA Security+</span><span class="chip">AWS Cloud Practitioner</span><span class="chip">AWS Cloud Security Foundations</span><span class="chip">API Security Bootcamp</span></div></div>
+
+  <div class="ab-block"><h2>Education</h2><div style="margin-top:14px">
+    <div class="edu-row"><span class="et">M.S. Information Systems &amp; Technology, Cybersecurity</span><span class="er">CGU · 2025–Present</span></div>
+    <div class="edu-row"><span class="et">Post-Graduate Certificate, Cybersecurity &amp; Threat Management</span><span class="er">Seneca · 2025</span></div>
+    <div class="edu-row"><span class="et">Doctor of Medicine</span><span class="er">2017–2024</span></div>
+  </div></div>
+
+  <div class="ab-block fun"><h2>Outside of this</h2><div class="bnote" style="margin-bottom:16px">The list keeps growing.</div>
+    <p>I listen to a lot of music, and I'm always up for a walk or a hike. I also have a habit of starting slightly random things. I've tried the violin, designing my own clothes, running a small pastry business, and even had a go at a B2C venture. I love to travel when I get the chance. Some of these stuck, and some didn't, but I like that the list keeps getting longer.</p>
+  </div>
+
+  <footer style="margin-top:0"><div class="foot-grid">
+    <div class="fbig">Want to work together? <a href="mailto:okomaucheoma404@gmail.com">Say hello →</a></div>
+    <div class="social"><a href="mailto:okomaucheoma404@gmail.com">Email</a><a href="https://www.linkedin.com/in/ucheoma-okoma/" target="_blank">LinkedIn</a><a href="https://medium.com/@ucheomaokoma_" target="_blank">Medium</a></div>
+  </div><div class="copy">© 2026 Ucheoma Okoma</div></footer>
+</div>
+<script>
+(function(){
+  var t=document.querySelector('.navtoggle'),
+      l=document.querySelector('.navlinks'),
+      s=document.querySelector('.navscrim');
+  if(!t||!l){return;}
+  function openMenu(){l.classList.add('open');t.classList.add('open');if(s){s.classList.add('open');}document.body.classList.add('nav-open');}
+  function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
+  t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
+  if(s){s.addEventListener('click',closeMenu);}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
+})();
+</script>
+</body>
+</html>
