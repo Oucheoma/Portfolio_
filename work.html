@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All work — Ucheoma Okoma</title>
+<link rel="icon" href="Ucheoma.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --perola:#F0EDE4; --perola-deep:#E7E2D6; --bege:#E3D6C5;
+  --azul:#788990; --azul-deep:#5e6e75; --terra:#974315; --terra-deep:#7d370f;
+  --verde:#8D957E; --verde-deep:#6f7763;
+  --ink:#2a2620; --ink-soft:#5d564c; --ink-faint:#938a7c;
+  --line:rgba(42,38,32,.12); --line-2:rgba(42,38,32,.20);
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,sans-serif; --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--perola);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--terra);color:var(--perola)}
+.accent-link{color:var(--terra);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.accent-link:hover{gap:9px}
+nav{position:sticky;top:0;z-index:50;background:rgba(240,237,228,.85);backdrop-filter:blur(12px);border-bottom:.5px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.brand{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks{display:flex;gap:30px}
+.navlinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;transition:color .2s}
+.navlinks a:hover,.navlinks a.active{color:var(--terra)}
+.btn{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:13px 22px;border-radius:2px;border:1px solid var(--line-2);background:transparent;cursor:pointer;transition:all .2s;color:var(--ink);display:inline-block}
+.btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn.primary{background:var(--terra);color:var(--perola);border-color:var(--terra)}
+.btn.primary:hover{background:var(--terra-deep)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:42px;padding-bottom:18px;border-bottom:1px solid var(--ink)}
+.sec-head h2{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em}
+.sec-head .num{font-size:11px;letter-spacing:.16em;color:var(--ink-faint);font-weight:600}
+footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.foot-grid .fbig{font-family:var(--serif);font-size:32px;font-weight:500;letter-spacing:-.01em;max-width:430px;line-height:1.25}
+.foot-grid .fbig a{color:var(--terra)}
+.social{display:flex;gap:20px;flex-wrap:wrap}
+.social a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;transition:color .2s}
+.social a:hover{color:var(--terra)}
+.copy{font-size:12px;color:var(--ink-faint);margin-top:30px}
+.placeholder{border:1.5px dashed var(--line-2);border-radius:6px;background:var(--perola-deep);padding:28px 20px;text-align:center;margin:16px 0;color:var(--ink-faint)}
+.placeholder .pl-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--terra);margin-bottom:6px}
+.placeholder .pl-desc{font-size:13px;color:var(--ink-soft)}
+@media(max-width:560px){.wrap{padding:0 24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+</style>
+<style>
+  .page-head{padding:80px 0 10px}
+  .page-head h1{font-family:var(--serif);font-size:46px;font-weight:500;letter-spacing:-.02em;margin-bottom:12px}
+  .page-head p{font-size:17px;color:var(--ink-soft);max-width:520px}
+  .block{padding:46px 0}
+  .cw-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .cw{border-radius:8px;padding:22px 24px;border:1px solid var(--line)}
+  .cw.c1{background:#eef1f0}
+  .cw.c2{background:#f2ece2}
+  .cw.c3{background:#edf0ea}
+  .cw.c4{background:#f3ede6}
+  .cw .cw-course{font-family:var(--serif);font-size:19px;font-weight:500;margin-bottom:6px}
+  .cw .cw-tools{font-size:12px;color:var(--ink-soft);margin-bottom:16px;letter-spacing:.01em}
+  .cw .cw-fp-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:5px}
+  .cw .cw-fp{font-size:14px;color:var(--ink);line-height:1.55}
+  .cw .cw-link{font-size:12px;color:var(--terra);font-weight:600;margin-top:12px;display:inline-block}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .op{border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--perola);transition:all .2s}
+  .op:hover{transform:translateY(-2px);border-color:var(--azul)}
+  .op .op-top{height:8px}
+  .op.a .op-top{background:var(--azul)}
+  .op.b .op-top{background:var(--terra)}
+  .op.c .op-top{background:var(--verde)}
+  .op.d .op-top{background:var(--azul-deep)}
+  .op-body{padding:20px 22px}
+  .op h3{font-family:var(--serif);font-size:17px;font-weight:500;line-height:1.2;margin-bottom:6px}
+  .op p{font-size:12px;color:var(--ink-soft)}
+  @media(max-width:760px){.cw-grid,.grid3{grid-template-columns:1fr}.page-head h1{font-size:34px}}
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
+  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
+  @media(max-width:480px){.wrap{padding:0 18px}h1.lead{font-size:34px}.cs h1{font-size:28px}.ab h1{font-size:32px}.p-body{padding:26px 22px}.cw-grid,.grid3{grid-template-columns:1fr}.foot-grid .fbig{font-size:24px}.tags{gap:6px}.cs,.ab{padding:40px 18px 20px}}
+
+
+
+  /* ===== mobile nav (hamburger) ===== */
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){
+    .navtoggle{display:block}
+    .navlinks{position:fixed;top:0;right:0;height:100vh;width:min(74vw,300px);background:var(--perola);flex-direction:column;justify-content:flex-start;gap:0;padding:90px 32px 32px;box-shadow:-12px 0 40px rgba(42,38,32,.16);transform:translateX(100%);transition:transform .3s ease;z-index:70}
+    .navlinks.open{transform:translateX(0)}
+    .navlinks a{font-size:14px;letter-spacing:.06em;padding:16px 0;border-bottom:.5px solid var(--line);width:100%}
+    nav .wrap{position:relative}
+    body.nav-open{overflow:hidden}
+    .navscrim{display:none;position:fixed;inset:0;background:rgba(42,38,32,.35);z-index:40}
+    .navscrim.open{display:block}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 22px}
+    .hero{padding:70px 0 50px}
+    .sec-head{flex-wrap:wrap;gap:6px}
+    .cs,.ab{padding:48px 22px 20px}
+    .csfoot{flex-wrap:wrap}
+    .csfoot .btn{flex:1;text-align:center;min-width:140px}
+    .foot-grid{flex-direction:column;align-items:flex-start}
+    .panel{width:100vw;padding:70px 26px 40px}
+    .tl-row{grid-template-columns:54px 1fr;gap:12px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    h1.lead{font-size:34px}
+    .cs h1{font-size:28px}
+    .ab h1{font-size:32px}
+    .p-body{padding:26px 22px}
+    .cw-grid,.grid3{grid-template-columns:1fr}
+    .foot-grid .fbig{font-size:24px}
+    .tags{gap:6px}.cs,.ab{padding:40px 18px 20px}
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="index.html">Ucheoma Okoma</a>
+  <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="work.html" class="active">Work</a>
+    <a href="about.html">About</a>
+    <a href="index.html#writing">Writing</a>
+    <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
+  </div>
+</div></nav>
+<div class="navscrim"></div>
+
+<div class="wrap">
+  <section class="page-head">
+    <h1>Selected work</h1>
+    <div class="sec-head"><h2></h2><span class="num"></span></div>
+    <!-- <p>Some coursework and projects I have built</p> -->
+  </section>
+  
+  <section class="block">
+    <div class="cw-grid">
+      <div class="cw c1">
+        <div class="cw-course">Securing a healthcare data platform</div>
+        <div class="cw-tools">Health informatics · Risk Assessment · HIPAA</div>
+        <div class="cw-fp-label">ONGOING</div>
+        <div class="cw-fp">Working across medical terminology, standards research, and security as several clinical systems come together into one shared platform.</div>
+        <a class="cw-link" href="clinical.html">Read More →</a>
+      </div>
+      <div class="cw c2">
+        <div class="cw-course">Testing a banking app against the OWASP API top 10</div>
+        <div class="cw-tools">Web app · Burp Suite · Postman · VM Ware</div>
+        <div class="cw-fp-label">Documented</div>
+        <div class="cw-fp">A hands-on assessment of a deliberately vulnerable banking app, finding the authorization and configuration weaknesses and writing up how to fix them.</div>
+        <a class="cw-link" href="dvb.html">Read More →</a>
+      </div>
+      <div class="cw c3">
+        <div class="cw-course">Assessing an API from its documentation</div>
+        <div class="cw-tools">vAPI · Postman · OWASP API top 10</div>
+        <div class="cw-fp-label">Documented</div>
+        <div class="cw-fp">Working a vulnerable API from its docs instead of a screen, reasoning about endpoints I could not see, the way real API testing often starts.</div>
+        <a class="cw-link" href="vapi.html">Read More →</a>
+      </div>
+      <!-- <div class="cw c4">
+        <div class="cw-course">IoT &amp; security</div>
+        <div class="cw-tools">IoT device security, from home health devices to infrastructure</div>
+        <div class="cw-fp-label">Final project</div>
+        <div class="cw-fp">A UPS battery monitoring system. I built a model that looks at battery data and classifies its state as normal, degradation, or thermal anomaly, so problems can be caught early.</div>
+      </div> -->
+    </div>
+  </section>
+  <section class="block">
+    <div class="sec-head"><h2>Coursework</h2><span class="num">most recent</span></div>
+    <div class="cw-grid">
+      <div class="cw c1">
+        <div class="cw-course">Machine learning in healthcare</div>
+        <div class="cw-tools">Google Colab · Python · Kaggle &amp; Hugging Face datasets</div>
+        <div class="cw-fp-label">Final project</div>
+        <div class="cw-fp">I worked with a real healthcare dataset, cleaned and explored it, and used it to predict whether patients would keep or miss their scheduled appointments, building the models with decision trees and a random forest.</div>
+      </div>
+      <div class="cw c2">
+        <div class="cw-course">Database systems</div>
+        <div class="cw-tools">SQL Server Management Studio · VS Code · T-SQL</div>
+        <div class="cw-fp-label">Final project</div>
+        <div class="cw-fp">We were given raw consumer datasets covering things like demographics, address, and profile information. I structured and normalized the data, then queried it to pull out patterns and make sense of what was there.</div>
+      </div>
+      <div class="cw c3">
+        <div class="cw-course">Networking</div>
+        <div class="cw-tools">Cisco Packet Tracer · subnetting · routing concepts</div>
+        <div class="cw-fp-label">Final project</div>
+        <div class="cw-fp">A research paper comparing how self-driving and connected cars defend their networks, looking at two different security frameworks and what each one gets right.</div>
+        <a class="cw-link" href="networking.html">Read the summary →</a>
+      </div>
+      <div class="cw c4">
+        <div class="cw-course">IoT &amp; security</div>
+        <div class="cw-tools">IoT device security, from home health devices to infrastructure</div>
+        <div class="cw-fp-label">Final project</div>
+        <div class="cw-fp">A UPS battery monitoring system. I built a model that looks at battery data and classifies its state as normal, degradation, or thermal anomaly, so problems can be caught early.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head"><h2>Earlier projects</h2><span class="num"></span></div>
+    <div class="grid3">
+      <div class="op a"><div class="op-top"></div><div class="op-body"><h3>IoT security with AWS &amp; Suricata</h3><p>An intrusion-detection setup monitoring device traffic, with tuned rules and dashboards.</p></div></div>
+      <div class="op b"><div class="op-top"></div><div class="op-body"><h3>AI privacy-aware chatbot</h3><p>A chatbot that redacts sensitive data before it reaches the model, threat-modeled with STRIDE.</p></div></div>
+      <div class="op c"><div class="op-top"></div><div class="op-body"><h3>Threat intelligence work</h3><p>Hands-on threat management and intelligence, tracking and making sense of current threats.</p></div></div>
+      <div class="op d"><div class="op-top"></div><div class="op-body"><h3>Cloud attack-surface monitoring</h3><p>A log-ingestion pipeline watching cloud configuration and surfacing risky changes.</p></div></div>
+    </div>
+    <!-- <div style="margin-top:18px"><a class="accent-link" href="https://www.linkedin.com/in/ucheoma-okoma" target="_blank">more on LinkedIn →</a></div> -->
+  </section>
+
+  <footer><div class="foot-grid">
+    <div class="fbig">Want to see more, or talk through any of it? <a href="mailto:okomaucheoma404@gmail.com">Say hello →</a></div>
+    <div class="social"><a href="mailto:okomaucheoma404@gmail.com">Email</a><a href="https://www.linkedin.com/in/ucheoma-okoma/" target="_blank">LinkedIn</a><a href="https://medium.com/@ucheomaokoma_" target="_blank">Medium</a></div>
+  </div><div class="copy">© 2026 Ucheoma Okoma</div></footer>
+</div>
+<script>
+(function(){
+  var t=document.querySelector('.navtoggle'),
+      l=document.querySelector('.navlinks'),
+      s=document.querySelector('.navscrim');
+  if(!t||!l){return;}
+  function openMenu(){l.classList.add('open');t.classList.add('open');if(s){s.classList.add('open');}document.body.classList.add('nav-open');}
+  function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
+  t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
+  if(s){s.addEventListener('click',closeMenu);}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
+})();
+</script>
+</body>
+</html>
