@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can physicians trust health AI? — Ucheoma Okoma</title>
+<link rel="icon" href="Ucheoma.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --perola:#F0EDE4; --perola-deep:#E7E2D6; --bege:#E3D6C5;
+  --azul:#788990; --azul-deep:#5e6e75; --terra:#974315; --terra-deep:#7d370f;
+  --verde:#8D957E; --verde-deep:#6f7763;
+  --ink:#2a2620; --ink-soft:#5d564c; --ink-faint:#938a7c;
+  --line:rgba(42,38,32,.12); --line-2:rgba(42,38,32,.20);
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,sans-serif; --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--perola);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--terra);color:var(--perola)}
+.accent-link{color:var(--terra);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.accent-link:hover{gap:9px}
+nav{position:sticky;top:0;z-index:50;background:rgba(240,237,228,.85);backdrop-filter:blur(12px);border-bottom:.5px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.brand{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.navlinks{display:flex;gap:30px}
+.navlinks a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;transition:color .2s}
+.navlinks a:hover,.navlinks a.active{color:var(--terra)}
+.btn{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:13px 22px;border-radius:2px;border:1px solid var(--line-2);background:transparent;cursor:pointer;transition:all .2s;color:var(--ink);display:inline-block}
+.btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn.primary{background:var(--terra);color:var(--perola);border-color:var(--terra)}
+.btn.primary:hover{background:var(--terra-deep)}
+@media(max-width:560px){.wrap{padding:0 24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>
+  .cs{padding:70px 40px 30px;max-width:720px;margin:0 auto}
+  .back{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:40px;display:inline-flex;gap:6px;align-items:center}
+  .cs h1{font-family:var(--serif);font-size:40px;line-height:1.12;letter-spacing:-.02em;font-weight:500;margin-bottom:18px}
+  .cs h1 .it{font-style:italic;color:var(--terra);font-weight:400}
+  .cs .cssum{font-size:18px;color:var(--ink-soft);margin-bottom:22px;line-height:1.6}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .tag{font-size:11px;letter-spacing:.06em;padding:5px 12px;border-radius:20px;background:var(--perola-deep);color:var(--ink-soft);font-weight:500}
+  .tag.live{background:var(--terra);color:var(--perola)}
+  .ctx{font-size:12px;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:46px;padding-bottom:24px;border-bottom:1px solid var(--line);text-transform:uppercase;font-weight:500}
+  .beat{margin-bottom:38px}
+  .beat .bnum{font-family:var(--serif);font-size:13px;font-weight:600;font-style:italic;color:var(--terra);margin-bottom:10px}
+  .beat h3.bh{font-family:var(--serif);font-size:22px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em}
+  .beat p{font-size:16px;color:var(--ink-soft);line-height:1.72;margin-bottom:14px}
+  .beat p a{color:var(--terra);border-bottom:1px solid rgba(151,67,21,.3)}
+  .threads{display:flex;flex-direction:column;gap:10px;margin:16px 0 38px}
+  .thread{background:var(--perola-deep);border-radius:6px;padding:18px 20px;border-left:3px solid var(--azul)}
+  .thread .tt{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:4px}
+  .thread .td{font-size:14px;color:var(--ink-soft);line-height:1.6}
+  .takeaway{background:var(--perola-deep);border-radius:6px;padding:16px 20px;margin:16px 0;font-size:15px;color:var(--ink);line-height:1.6}
+  .takeaway b{font-family:var(--serif);font-weight:600;color:var(--terra)}
+  .csfoot{display:flex;gap:12px;padding-top:30px;border-top:1px solid var(--line)}
+  @media(max-width:560px){.cs h1{font-size:32px}}
+
+  /* ===== mobile nav (hamburger) ===== */
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
+  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
+  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .navtoggle.open span:nth-child(2){opacity:0}
+  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  @media(max-width:720px){
+    .navtoggle{display:block}
+    .navlinks{position:fixed;top:0;right:0;height:100vh;width:min(74vw,300px);background:var(--perola);flex-direction:column;justify-content:flex-start;gap:0;padding:90px 32px 32px;box-shadow:-12px 0 40px rgba(42,38,32,.16);transform:translateX(100%);transition:transform .3s ease;z-index:70}
+    .navlinks.open{transform:translateX(0)}
+    .navlinks a{font-size:14px;letter-spacing:.06em;padding:16px 0;border-bottom:.5px solid var(--line);width:100%}
+    nav .wrap{position:relative}
+    body.nav-open{overflow:hidden}
+    .navscrim{display:none;position:fixed;inset:0;background:rgba(42,38,32,.35);z-index:40}
+    .navscrim.open{display:block}
+    .wrap{padding:0 22px}
+    .cs{padding:48px 22px 20px}
+    .csfoot{flex-wrap:wrap}
+    .csfoot .btn{flex:1;text-align:center;min-width:140px}
+  }
+  @media(max-width:480px){
+    .wrap{padding:0 18px}
+    .cs h1{font-size:28px}
+    .tags{gap:6px}.cs{padding:40px 18px 20px}
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="index.html">Ucheoma Okoma</a>
+  <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="index.html#writing">Writing</a>
+    <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div></nav>
+<div class="navscrim"></div>
+
+<div class="wrap cs">
+  <a class="back" href="index.html">← back to home</a>
+  <h1>Can physicians <span class="it">trust</span> health AI?</h1>
+  <p class="cssum">The question I'm working on: whether doctors can trust the AI tools entering the medical field, from the data they're trained on to the answers they give.</p>
+  <div class="tags"><span class="tag live">In progress</span><span class="tag">Health AI</span><span class="tag">Trust &amp; security</span><span class="tag">Health informatics</span></div>
+  <div class="ctx">Research direction · health informatics &amp; security</div>
+
+  <div class="beat">
+    <div class="bnum">Why this question</div>
+    <h3 class="bh">Patients already trust it. Physicians have to decide whether they can.</h3>
+    <p>AI is moving into medicine from two directions at once. Patients ask chatbots about their symptoms every day, and physicians are adopting AI inside their own work for documentation, triage and decision support. Every one of those tools produces an answer that sounds confident, whether or not it's right.</p>
+    <p>The record shows how often that confidence is misplaced. A widely used hospital sepsis alert performed far worse in <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781307" target="_blank">independent testing</a> than its developer reported. A man was hospitalised with bromide poisoning after <a href="https://www.acpjournals.org/doi/10.7326/aimcc.2024.1260" target="_blank">following a chatbot's advice</a> on replacing table salt. In a <a href="https://www.ox.ac.uk/news/2026-02-10-new-study-warns-risks-ai-chatbots-giving-medical-advice" target="_blank">2026 Oxford trial</a>, people using chatbots for medical decisions did no better than people who didn't. And when an AI gives a wrong suggestion, even <a href="https://www.rsna.org/news/2023/may/ai-bias-may-impair-accuracy" target="_blank">experienced radiologists</a> often follow it.</p>
+    <p>Physicians are the ones who act on these outputs and carry the responsibility. Yet they rarely have a way to judge whether a specific tool, or a specific answer, deserves their trust.</p>
+  </div>
+
+  <div class="beat">
+    <div class="bnum">How I think about it</div>
+    <h3 class="bh">Trust can break at four layers</h3>
+    <p>Looking at documented failures, each one breaks at one or more of these points, and by the time an answer reaches a physician, nothing on its face shows where it went wrong.</p>
+  </div>
+  <div class="threads">
+    <div class="thread"><div class="tt">1. Training data</div><div class="td">Is the data representative of the patients the tool will see, and labelled for the right target?</div></div>
+    <div class="thread"><div class="tt">2. The model</div><div class="td">Does reported performance hold up under independent, local validation?</div></div>
+    <div class="thread"><div class="tt">3. The output</div><div class="td">Is this specific answer correct, complete and safe for this patient?</div></div>
+    <div class="thread"><div class="tt">4. Use and security</div><div class="td">Do people, workflows and safeguards keep a real check on the AI, and can the system be manipulated or leak patient data?</div></div>
+  </div>
+
+  <div class="beat">
+    <div class="bnum">Why me</div>
+    <h3 class="bh">Medicine, technology and security in one place</h3>
+    <p>Most people in health AI can judge either the medicine or the technology. My path gives me both, plus security, which is where trust is actually enforced. My medical training lets me judge whether a clinical output is right. My computer science and cybersecurity training lets me look at how the data, the model and the system around it are built and where they can fail. My current health informatics work, normalizing and adjudicating medical terminology for a healthcare data platform, keeps me close to how clinical data is actually structured, which is where trust in any AI built on it begins.</p>
+  </div>
+
+  <div class="beat">
+    <div class="bnum">Related work</div>
+    <h3 class="bh">Where this connects</h3>
+    <p>I'm also co-authoring research on early dementia detection from speech, currently under review, which gives me a first-hand view of how diagnostic models are built and evaluated. My <a href="networking.html">research on security for self-driving cars</a> asked a parallel question: how a system decides whether to trust information it can't fully verify.</p>
+  </div>
+
+  <div class="takeaway"><b>Working on trust, safety or security in health AI?</b> I'd love to hear how you approach it. <a class="accent-link" href="mailto:okomaucheoma404@gmail.com">Let's talk →</a></div>
+
+  <div class="csfoot"><a class="btn" href="work.html">See my work</a><a class="btn primary" href="mailto:okomaucheoma404@gmail.com">Get in touch</a></div>
+</div>
+<script>
+(function(){
+  var t=document.querySelector('.navtoggle'),
+      l=document.querySelector('.navlinks'),
+      s=document.querySelector('.navscrim');
+  if(!t||!l){return;}
+  function openMenu(){l.classList.add('open');t.classList.add('open');if(s){s.classList.add('open');}document.body.classList.add('nav-open');}
+  function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
+  t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
+  if(s){s.addEventListener('click',closeMenu);}
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){closeMenu();}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
+})();
+</script>
+</body>
+</html>
