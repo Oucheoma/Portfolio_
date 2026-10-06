@@ -64,9 +64,12 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   .cw.c2{background:#f2ece2}
   .cw.c3{background:#edf0ea}
   .cw.c4{background:#f3ede6}
+  .cw.feature{grid-column:1 / -1;background:var(--perola-deep);border-left:3px solid var(--terra)}
+  .cw.feature .cw-course{font-style:italic}
   .cw .cw-course{font-family:var(--serif);font-size:19px;font-weight:500;margin-bottom:6px}
   .cw .cw-tools{font-size:12px;color:var(--ink-soft);margin-bottom:16px;letter-spacing:.01em}
   .cw .cw-fp-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:5px}
+  .cw .cw-fp-label.live{color:var(--terra)}
   .cw .cw-fp{font-size:14px;color:var(--ink);line-height:1.55}
   .cw .cw-link{font-size:12px;color:var(--terra);font-weight:600;margin-top:12px;display:inline-block}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -81,16 +84,6 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   .op h3{font-family:var(--serif);font-size:17px;font-weight:500;line-height:1.2;margin-bottom:6px}
   .op p{font-size:12px;color:var(--ink-soft)}
   @media(max-width:760px){.cw-grid,.grid3{grid-template-columns:1fr}.page-head h1{font-size:34px}}
-  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
-  .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
-  .navtoggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-  .navtoggle.open span:nth-child(2){opacity:0}
-  .navtoggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
-  @media(max-width:720px){.wrap{padding:0 22px}.hero{padding:70px 0 50px}.sec-head{flex-wrap:wrap;gap:6px}.cs,.ab{padding:48px 22px 20px}.csfoot{flex-wrap:wrap}.csfoot .btn{flex:1;text-align:center;min-width:140px}.foot-grid{flex-direction:column;align-items:flex-start}.panel{width:100vw;padding:70px 26px 40px}.tl-row{grid-template-columns:54px 1fr;gap:12px}}
-  @media(max-width:480px){.wrap{padding:0 18px}h1.lead{font-size:34px}.cs h1{font-size:28px}.ab h1{font-size:32px}.p-body{padding:26px 22px}.cw-grid,.grid3{grid-template-columns:1fr}.foot-grid .fbig{font-size:24px}.tags{gap:6px}.cs,.ab{padding:40px 18px 20px}}
-
-
 
   .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin:-8px;z-index:60}
   .navtoggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:all .3s}
@@ -109,24 +102,13 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   }
   @media(max-width:720px){
     .wrap{padding:0 22px}
-    .hero{padding:70px 0 50px}
     .sec-head{flex-wrap:wrap;gap:6px}
-    .cs,.ab{padding:48px 22px 20px}
-    .csfoot{flex-wrap:wrap}
-    .csfoot .btn{flex:1;text-align:center;min-width:140px}
     .foot-grid{flex-direction:column;align-items:flex-start}
-    .panel{width:100vw;padding:70px 26px 40px}
-    .tl-row{grid-template-columns:54px 1fr;gap:12px}
   }
   @media(max-width:480px){
     .wrap{padding:0 18px}
-    h1.lead{font-size:34px}
-    .cs h1{font-size:28px}
-    .ab h1{font-size:32px}
-    .p-body{padding:26px 22px}
     .cw-grid,.grid3{grid-template-columns:1fr}
     .foot-grid .fbig{font-size:24px}
-    .tags{gap:6px}.cs,.ab{padding:40px 18px 20px}
   }
 </style>
 </head>
@@ -136,33 +118,55 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
   <div class="navlinks">
     <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
     <a href="work.html" class="active">Work</a>
     <a href="about.html">About</a>
     <a href="index.html#writing">Writing</a>
     <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
+    <a href="#contact">Contact</a>
   </div>
 </div></nav>
 <div class="navscrim"></div>
 
 <div class="wrap">
-  <!-- <section class="page-head">
-    <h1>Selected work</h1>
-    <div class="sec-head"><h2></h2><span class="num"></span></div>
-    
-  </section> -->
-  
+
+  <section class="block">
+    <div class="sec-head"><h2>RESEARCH</h2><span class="num">Current &amp; recent</span></div>
+    <div class="cw-grid">
+      <div class="cw feature">
+        <div class="cw-course">Can physicians trust health AI?</div>
+        <div class="cw-tools">Health AI · Trust &amp; security · Health informatics</div>
+        <div class="cw-fp-label live">Research direction · in progress</div>
+        <div class="cw-fp">Investigating whether physicians can trust the AI tools entering the medical field, from the data they're trained on and the models themselves to the outputs and diagnoses they produce, at a time when patients are already acting on AI health advice.</div>
+        <a class="cw-link" href="research.html">Read about it →</a>
+      </div>
+      <div class="cw c1">
+        <div class="cw-course">Early dementia detection from speech</div>
+        <div class="cw-tools">Machine learning · Clinical NLP · Co-authored</div>
+        <div class="cw-fp-label">Under review</div>
+        <div class="cw-fp">Collaborative research on identifying early indicators of dementia from speech. Details will be shared after publication.</div>
+      </div>
+      <div class="cw c2">
+        <div class="cw-course">Security frameworks for self-driving cars</div>
+        <div class="cw-tools">Vehicular networks · PKI · Edge security · First author</div>
+        <div class="cw-fp-label">Research paper</div>
+        <div class="cw-fp">A comparison of how connected and self-driving cars decide whether to trust messages they can't fully verify, weighing an edge-assisted approach against the national Security Credential Management System.</div>
+        <a class="cw-link" href="networking.html">Read the summary →</a>
+      </div>
+    </div>
+  </section>
 
   <section class="block">
     <div class="sec-head"><h2>EXPERIENCE</h2><span class="num"></span></div>
     <div class="cw-grid">
       <div class="cw c1">
-        <div class="cw-course">Health Informatics & Security | Global Health Intelligence (GHI)</div>
-        <div class="cw-tools">Risk Assessment · HIPAA · STRIDE </div>
-        <div class="cw-fp-label">INTERNSHIP</div>
+        <div class="cw-course">Health Informatics | Global Health Intelligence (GHI)</div>
+        <div class="cw-tools">Medical terminology · Data normalization · UMLS</div>
+        <div class="cw-fp-label">RESEARCH ASSISTANT · 2026–PRESENT</div>
         <ul>
-           <div class="cw-fp"> Assess security considerations of healthcare data systems being consolidated into an interoperable platform by mapping data flows and identifying trust boundaries. </div> <br> 
-           <div class="cw-fp"> Apply UMLS, HIPAA, and STRIDE threat-modeling principles to support security recommendations.  </div> <br> 
-           <div class="cw-fp"> Contribute to risk assessments through reports, data-flow diagrams, and decision trees for technical and nontechnical stakeholders </div> <br> 
+           <div class="cw-fp"> Normalize how clinical data is classified across body systems, diseases and surgical procedures, forming the base structure of an interoperable healthcare data platform. </div> <br> 
+           <div class="cw-fp"> Adjudicate medical terms to make sure the right terms are matched to the right clinical meaning. </div> <br> 
+           <div class="cw-fp"> Earlier, supported an introductory security and risk assessment of the platform, including data-flow mapping. </div> <br> 
         </ul>
         
       </div>
@@ -171,7 +175,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
       <div class="cw c2">
         <div class="cw-course">Software Engineer Intern | INSPIRE UVic</div>
         <div class="cw-tools">Python · OpenCV · React · Node.js  · YOLOv8</div>
-        <div class="cw-fp-label">INTERNSHIP</div>
+        <div class="cw-fp-label">INTERNSHIP · SEPT–DEC 2023</div>
           <ul>
            <div class="cw-fp"> Contributed to the development of a computer-vision solution for wildfire smoke detection and trespass monitoring using existing camera infrastructure supporting monitoring of regional watershed and rainforest areas.  </div> <br> 
            <div class="cw-fp"> Supported model integration and application development using YOLOv8, OpenCV, React, Node.js, and MySQL.  </div> <br> 
@@ -203,7 +207,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
            <div class="cw-fp">  Built an end-to-end IoT traffic monitoring environment using AWS IoT Core, EC2, Suricata IDS, Filebeat, Elasticsearch, and Kibana.  </div> <br> 
            <div class="cw-fp"> Simulated abnormal IoT traffic patterns using Python to evaluate detection capabilities and validate alert generation. </div> <br> 
            <div class="cw-fp"> Configured log forwarding pipelines from Suricata through Filebeat into Elasticsearch and developed Kibana dashboards to visualize security events and trends. </div> <br>
-           <div class="cw-fp"> Troubleshot authentication, logging, and alert-threshold issues while improving visibility into cloudconnected IoT traffic. </div>
+           <div class="cw-fp"> Troubleshot authentication, logging, and alert-threshold issues while improving visibility into cloud-connected IoT traffic. </div>
           </ul>
           <a class="cw-link" href="https://medium.com/@ucheomaokoma_/how-i-used-suricata-kibana-and-aws-to-monitor-iot-traffic-in-real-time-lessons-from-my-08593bae8c1b">Medium Article →</a>
       </div>
@@ -240,7 +244,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
         <div class="cw-course">Networking</div>
         <div class="cw-tools">Cisco Packet Tracer · subnetting · routing concepts</div>
         <div class="cw-fp-label">Final project</div>
-        <div class="cw-fp">A research paper comparing how self-driving and connected cars defend their networks, looking at two different security frameworks and what each one gets right.</div>
+        <div class="cw-fp">The course where my self-driving car security paper began. See it under Research above.</div>
         <a class="cw-link" href="networking.html">Read the summary →</a>
       </div>
       <div class="cw c4">
@@ -253,8 +257,8 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   </section>
 
 
-  <footer><div class="foot-grid">
-    <div class="fbig">Want to see more, or talk through any of it? <a href="mailto:okomaucheoma404@gmail.com">Say hello →</a></div>
+  <footer id="contact"><div class="foot-grid">
+    <div class="fbig">Working on trust in health AI, or want to talk through any of this? <a href="mailto:okomaucheoma404@gmail.com">Say hello →</a></div>
     <div class="social"><a href="mailto:okomaucheoma404@gmail.com">Email</a><a href="https://www.linkedin.com/in/ucheoma-okoma/" target="_blank">LinkedIn</a><a href="https://medium.com/@ucheomaokoma_" target="_blank">Medium</a></div>
   </div><div class="copy">© 2026 Ucheoma Okoma</div></footer>
 </div>
@@ -268,6 +272,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
   t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
   if(s){s.addEventListener('click',closeMenu);}
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){closeMenu();}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
 })();
 </script>
