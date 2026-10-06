@@ -123,10 +123,12 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   <button class="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
   <div class="navlinks">
     <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
     <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="index.html#writing">Writing</a>
     <a href="Ucheoma_Okoma_Resume.pdf" target="_blank">Resume</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 </div></nav>
 <div class="navscrim"></div>
@@ -135,7 +137,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   <h1>Comparing security frameworks for self-driving cars</h1>
   <p class="cssum">A short summary of my networking research project, the piece of research I am most proud of so far.</p>
   <div class="tags"><span class="tag">Research</span><span class="tag">Networking</span><span class="tag">Vehicular security</span></div>
-  <div class="ctx">Networking final project · research paper</div>
+  <div class="ctx">Networking final project · research paper · first author</div>
 
   <div class="beat"><p>This started as my final project for a networking course, and it turned into the piece of research I am most proud of so far. The question I wanted to answer was simple to ask and hard to answer: how do self-driving and connected cars actually protect themselves from being attacked, and which approach works best?</p>
   <p>Self-driving cars are not really single machines. They are constantly talking to each other, to traffic infrastructure, and to the wider network around them. That constant communication is what lets them react in time, but it is also the problem. A car often has to trust a message from a source it cannot fully verify, and it has milliseconds to decide. If someone feeds it false information, the consequences are not abstract. They are physical.</p>
@@ -144,6 +146,8 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   <p>I also wanted to see what the companies are doing in practice, so I looked at how Waymo and Tesla handle it. What stood out was the gap between what the research recommends and what is actually deployed. Both companies have built genuinely capable security, but each keeps it closed and proprietary, and neither uses a shared standard that would let cars from different makers trust each other safely.</p>
   <p>Where I landed is that the best path forward is probably a mix of the two: use the national system to issue trustworthy credentials, and use an edge layer to protect those credentials while the car is actually on the road. The full paper goes deeper into each framework, the trade-offs, and the open problems still left to solve, including supply chain risk and the question of how mixed fleets running different standards are meant to trust each other.</p>
   <p><em>The full paper is available on request.</em></p></div>
+
+  <div class="takeaway"><b>Why this still matters to me.</b> A car has to decide in milliseconds whether to trust a message it can't fully verify. A physician faces the same problem with an AI's answer. That parallel is what led to the question I'm working on now: <a class="accent-link" href="research.html">can physicians trust health AI? →</a></div>
 
   <div class="csfoot"><a class="btn" href="work.html">Back to all work</a><a class="btn primary" href="mailto:okomaucheoma404@gmail.com">Get in touch</a></div>
 </div>
@@ -157,6 +161,7 @@ footer{padding:70px 0 80px;border-top:1px solid var(--ink);margin-top:40px}
   function closeMenu(){l.classList.remove('open');t.classList.remove('open');if(s){s.classList.remove('open');}document.body.classList.remove('nav-open');}
   t.addEventListener('click',function(e){e.stopPropagation();if(l.classList.contains('open')){closeMenu();}else{openMenu();}});
   if(s){s.addEventListener('click',closeMenu);}
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){closeMenu();}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});
 })();
 </script>
